@@ -1,7 +1,6 @@
 [gd_scene load_steps=22 format=4 uid="uid://nw8j171q70xg"]
 
 [ext_resource type="Script" path="res://scripts/Windmill.cs" id="1_4bfee"]
-[ext_resource type="Shader" path="res://scripts/bush.gdshader" id="2_guty3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_13d0j"]
 
@@ -103,14 +102,20 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_eqorc")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_k0pug"]
-render_priority = 0
-shader = ExtResource("2_guty3")
-shader_parameter/color = Color(0.783053, 0.518975, 5.77569e-07, 1)
-shader_parameter/color2 = Color(0.781703, 0.519845, 7.70092e-07, 1)
-shader_parameter/noiseScale = 20.0
-shader_parameter/voronoiScale = 5.0
-shader_parameter/voronoiIntensity = 0.5
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7homb"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lgbdr"]
+_surfaces = [{
+"aabb": AABB(-1.50996e-07, -5.23632e-07, -2, 1e-05, 4.39254, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAADAAEAAAACAAMA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAD/////AADdAwAA//8AAAAA//8AAAAA3QMAABhXAAA=")
+}]
+blend_shape_mode = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_f1qbh"]
 resource_name = "windmill_Plane"
@@ -120,13 +125,14 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 6,
 "index_data": PackedByteArray("AAADAAEAAAACAAMA"),
-"material": SubResource("ShaderMaterial_k0pug"),
+"material": SubResource("StandardMaterial3D_7homb"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
 "vertex_data": PackedByteArray("AAD/////VdjdAwAA//9U1QAA//8AAAjZ3QMAABhXRNZprNNYqqpUVcysmlk5q3NW")
 }]
 blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_lgbdr")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_udrlc"]
 
