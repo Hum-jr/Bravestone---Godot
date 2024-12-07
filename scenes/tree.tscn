@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://kd6pwqdlken8"]
+
+[ext_resource type="PackedScene" uid="uid://mbi5jcg0myqf" path="res://scenes/bush.tscn" id="1_6lqqe"]
+[ext_resource type="PackedScene" uid="uid://dxbfe6df728tf" path="res://scenes/trunk.tscn" id="2_dq14g"]
+
+[node name="Tree" type="Node3D"]
+
+[node name="trunk" parent="." instance=ExtResource("2_dq14g")]
+transform = Transform3D(0.5, -8.74228e-08, 0, 8.74228e-08, 0.5, 0, 0, 0, 0.5, 0, 0, 0.0147214)
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.311021, 7.43258, 0.373675)
+
+[node name="bush2" parent="Head" instance=ExtResource("1_6lqqe")]
+transform = Transform3D(-1, 1.50996e-07, 0, -1.50996e-07, -1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="bush" parent="Head" instance=ExtResource("1_6lqqe")]
+
+[node name="Head2" type="Node3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.277764, 5.37566, 2.26757)
+
+[node name="bush2" parent="Head2" instance=ExtResource("1_6lqqe")]
+transform = Transform3D(-1, 1.50996e-07, 0, -1.50996e-07, -1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="bush" parent="Head2" instance=ExtResource("1_6lqqe")]
+
+[node name="Head3" type="Node3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.277764, 5.45361, -1.5156)
+
+[node name="bush2" parent="Head3" instance=ExtResource("1_6lqqe")]
+transform = Transform3D(-1, 1.50996e-07, 0, -1.50996e-07, -1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="bush" parent="Head3" instance=ExtResource("1_6lqqe")]

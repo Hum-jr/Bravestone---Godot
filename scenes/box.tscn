@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://cproysuoapbgu"]
+
+[ext_resource type="Texture2D" uid="uid://orm4kuj1oupt" path="res://assets/textures/protoype/Orange/texture_13.png" id="1_d3nub"]
+[ext_resource type="PackedScene" uid="uid://cpqg8x0djo7lu" path="res://assets/models/rock.glb" id="2_i0r77"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x4gad"]
+albedo_texture = ExtResource("1_d3nub")
+
+[sub_resource type="BoxMesh" id="BoxMesh_e73sj"]
+lightmap_size_hint = Vector2i(14, 21)
+material = SubResource("StandardMaterial3D_x4gad")
+
+[node name="Box" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_e73sj")
+
+[node name="rock" parent="." instance=ExtResource("2_i0r77")]
